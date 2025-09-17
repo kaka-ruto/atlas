@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/jesseduffield/lazygit/pkg/app"
+	"github.com/kaka-ruto/atlas/pkg/atlas"
 )
 
 // These values may be set by the build script via the LDFLAGS argument
@@ -20,5 +21,6 @@ func main() {
 		BuildSource: buildSource,
 	}
 
-	app.Start(ldFlagsBuildInfo, nil)
+	// Use Atlas instead of standard lazygit
+	atlas.Start(ldFlagsBuildInfo, nil)
 }
